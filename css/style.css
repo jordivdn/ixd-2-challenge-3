@@ -1,0 +1,270 @@
+@font-face {
+    font-family: d-din;
+    src: url(fonts/D-DIN.otf);
+}
+
+@font-face {
+    font-family: d-din-Bold;
+    src: url(fonts/D-DIN-Bold.otf);
+}
+
+* {
+    margin: 0px;
+}
+body {
+    background-color: #202020;;
+	color: #FFFFFF99;;
+	font-family: d-din;
+	font-size: 10px;
+}
+nav{
+    background-color: #181818;
+    min-height: 50px;
+}
+nav > p {
+    display: none;
+}
+
+nav > a{
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 40%;
+    color: white;
+}
+.title-header {
+    text-align: center;
+    font-family: d-din-Bold;
+    font-size: 28px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    height: 25px;
+    color:#FFFFFFDE;
+}
+
+.sub-header{
+    text-align: center;
+    font-family: d-din;
+    font-size: 14px;
+    padding-top: 0px;
+    padding-bottom: 30px;
+    color:#FFFFFF99;
+}
+
+main > h1 {
+    text-align: center;
+    margin-top:30px;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+.container {
+    display: grid;
+    grid-template-areas: 
+        "slocation"
+        "maps"
+        "weathercomment"
+        "weather";
+    margin: 5%;
+    margin-top: 2%;
+    grid-row-gap: 15px;
+}
+.slocation, .maps, .weathercomment, .weather {
+    background-color: white;
+    padding: 5%;
+}
+.slocation{
+    grid-area: slocation;
+    background-color: transparent;
+    padding-left: 0%;
+}
+#slocation {
+    font-size: 18px;
+    font-weight: bold;
+}
+#coords, #plaats {
+    font-size: 15px;
+}
+.maps{
+    grid-area: maps;
+    background-color: white;
+    padding: 0%;
+}
+#reloadpage{
+    margin-top: 20px;
+}
+#btn-reload {
+    height: 5%;
+    width: 5%;  
+    padding: 10px;
+}
+#btn-reload:hover {
+    font-weight: normal;
+}
+.contbtn{
+   display: grid;
+   grid-template-areas: 
+       "searchbtn";
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.searchbtn{
+    grid-area: searchbtn;
+    font-family: d-din-bold;
+    padding: 7px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    background-color: #BB86FC;
+    text-align: center;
+    color: #FFFFFFDE;
+    font-size: 18px;
+}
+.searchbtn:hover {
+    font-weight: normal;
+}
+
+.weather{
+    grid-area: weather;
+    background-color: white;
+}
+#maps {
+	width: 100%;
+	height: 250px;
+}
+#maps > img {
+    display: none;
+}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display:none;
+}
+#weather {
+	width: 100%;
+	overflow: hidden;
+}
+#weather > .forecastMoment {
+	float: left;
+	width: 50%;
+	padding-top: 4px;
+	padding-bottom: 20px;
+	text-align: center;
+    background-color: white;
+	color: #444;
+	font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.icon > img {
+    width: 30%;
+}
+.temp {
+	font-weight: bold;
+	color: #008000;
+	font-size: 1.3em;
+}
+.hidden {
+	display: none;
+}
+#comment {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 30px;
+}
+.weathercomment > h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+#weathercomment, #weathercomment2{
+    font-size: 13px;
+}
+
+@media only screen and (max-width: 899px) and (min-width: 550px) {
+    .container {
+    display: grid;
+    grid-template-areas: 
+        "slocation slocation"
+        "maps maps"
+        "weathercomment weathercomment"
+        "weather weather";
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 3%;
+    grid-column-gap: 3%;
+    }
+
+    .weathercomment {
+        width: 196%;
+    }
+    .slocation{
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    nav > a{
+        margin-left: 50%;
+    }
+    #weather > .forecastMoment {
+	float: left;
+	width: 25%;
+	padding-top: 4px;
+	padding-bottom: 20px;
+	text-align: center;
+    background-color: white;
+	color: #444;
+	font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    } 
+}
+     
+@media only screen and (max-width: 1313px) and (min-width: 900px) {
+    .container {
+        display: grid;
+        grid-template-areas: 
+            "slocation slocation"
+            "maps maps"
+            "weathercomment weather";
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 25px;
+        grid-column-gap: 25px;
+    }
+
+    .slocation{
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    nav > a{
+        margin-left: 61%;
+    } 
+}    
+
+@media only screen and (min-width: 1314px) {
+    .container {
+        display: grid;
+        grid-template-areas: 
+            "slocation slocation slocation"
+            "maps maps maps"
+            "weathercomment weather weather";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row-gap: 15px;
+        grid-column-gap: 15px;
+    }
+
+    .slocation{
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    nav > a{
+        margin-left: 66%;
+    }
+    #weather > .forecastMoment {
+	float: left;
+	width: 25%;
+	padding-top: 4px;
+	padding-bottom: 20px;
+	text-align: center;
+    background-color: white;
+	color: #444;
+	font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    }  
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Spacex landing pad dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link type="text/css" rel="stylesheet" href="css/style.css" />
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJeDHgBXpFfYbMtHDQW_9VW9JTCWzWckc&callback=initMap"></script>
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+       <header>
+           <nav>
+                <h1 class="title-header">SpaceX Landing Pad</h1>
+                <h2 class="sub-header">Landing Pad Data Analyser</h2>
+            </nav>
+       </header>
+       <main>
+          <h1><span style="color:#BB86FC;font-weight:bold">Falcon 10</span> analyzing data for succesful landing..</h1>
+          <section class="contbtn">
+              <a id="searchbtn" class="searchbtn" onclick="getClicks();initMap();clearData();getAPIdata();onAPISucces()">Locate new spot</a>
+              </section>
+           <section class="container">
+               <section class="slocation">
+                   <div id="slocation"></div>
+                  <div id="coords"></div>
+                   <div id="reloadpage">
+                       <img src="image/refresh.svg" id="btn-reload" onclick="window.location.reload();">
+                   </div>
+               </section>
+               <section class="maps">
+                   <div id="maps"></div>
+               </section>
+               <section class="weathercomment">
+                   <div id="comment"></div>
+               </section>     
+               <section class="weather">
+                   <div id="weather"></div>
+               </section>
+           </section>
+       </main>
+    </body>
+</html>
